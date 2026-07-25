@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio web del Club Abastense de La Plata.">
+  <title>Club Abastense</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src="img/escudo.png" alt="Escudo del Club Abastense">
+        <span>
+          <strong>Club Abastense</strong>
+          <small>La Plata</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#club">El club</a></li>
+          <li><a href="#deportes">Deportes</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#socio">Sé socio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="button button-primary header-cta" href="#socio">Sumate</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+
+      <img class="hero-img" src="img/campeones.jpg" alt="Jugadores del Club Abastense festejando el campeonato">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content page-grid">
+        <div class="hero-info">
+          <p class="eyebrow eyebrow-light">Noticia destacada</p>
+
+          <h1 id="hero-titulo">¡Campeones!</h1>
+
+          <p>
+            Nuestro equipo se consagró campeón de la Liga Amistad apertura 2026.
+            Felicitaciones a jugadores, cuerpo técnico y a toda la familia abastense.
+          </p>
+
+          <a class="button button-light" href="#noticias">
+            Leer noticia
+          </a>
+        </div>
+
+        <div class="slider-controls">
+          <button type="button" aria-label="Noticia anterior">‹</button>
+
+          <div class="slider-dots" aria-hidden="true">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <button type="button" aria-label="Noticia siguiente">›</button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="section page-grid about" id="club">
+      <div class="nosotros-texto">
+        <p class="eyebrow">El club</p>
+        <h2>Más que un club,<br>somos familia</h2>
+        <p>
+          Desde hace décadas trabajamos por el deporte, la formación y el encuentro
+          de toda la comunidad. Un lugar de pertenencia para grandes y chicos.
+        </p>
+        <a class="button button-primary" href="#contacto">Conocé nuestra historia</a>
+      </div>
+      <div class="about-image image-club" role="img" aria-label="Fachada del Club Abastense">
+        <img src="img/fachada.jpg" alt="Fachada">
+        <!--<span>Imagen del club</span>-->
+      </div>
+    </section>
+
+    <section class="section section-soft" id="deportes">
+      <div class="page-grid">
+        <div class="secction-encabezado">
+          <div>
+            <p class="eyebrow">Deportes y actividades</p>
+            <h2>Encontrá tu lugar en el club</h2>
+          </div>
+          <a class="text-link" href="#socio">Ver todas las actividades →</a>
+        </div>
+
+        <div class="sports-grid">
+          <div class="card-contenedor">
+            <article class="card-actividad">
+              <div class="card-actividad-image image-football" role="img"
+                aria-label="Entrenamiento de fútbol">
+                <img src="img/futbol.jpg" alt="">
+                <!--<span>Fútbol</span>-->
+              </div>
+              <div class="card-actividad-contenido">
+                <div class="sport-icon" aria-hidden="true">⚽</div>
+                <h3>Fútbol</h3>
+                <p>Categorías infantiles, juveniles y mayores.</p>
+                <a href="#socio">Ver más →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="card-contenedor">
+            <article class="card-actividad">
+              <div class="card-actividad-image image-skating" role="img"
+                aria-label="Clase de Bachata y Salsa">
+                <img src="img/baile.jpg" alt="">
+                <!--<span></span>-->
+              </div>
+              <div class="card-actividad-contenido">
+                <div class="sport-icon" aria-hidden="true">⛸</div>
+                <h3>Bachata y Salsa</h3>
+                <p>Clases para todas las edades y niveles.</p>
+                <a href="#socio">Ver más →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="card-contenedor">
+            <article class="card-actividad">
+              <div class="card-actividad-image image-volley" role="img"
+                aria-label="Entrenamiento de vóley">
+                <img src="img/voley.png" alt="">
+                
+              </div>
+              <div class="card-actividad-contenido">
+                <div class="sport-icon" aria-hidden="true">🏐</div>
+                <h3>Vóley</h3>
+                <p>Entrenamientos y competencias durante todo el año.</p>
+                <a href="#socio">Ver más →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-grid news" id="noticias">
+      <div class="secction-encabezado">
+        <div>
+          <p class="eyebrow">Actualidad</p>
+          <h2>Últimas noticias</h2>
+        </div>
+        <a class="text-link" href="#inicio">Volver a destacadas →</a>
+      </div>
+
+      <div class="news-grid">
+        <article class="card-noticias">
+          <p class="noticia-fecha">15 de julio</p>
+          <h3>Abastense se consagró campeón</h3>
+          <p>Una jornada histórica acompañada por toda la comunidad.</p>
+          <a href="#">Leer noticia →</a>
+        </article>
+        <article class="card-noticias">
+          <p class="noticia-fecha">8 de julio</p>
+          <h3>Inscripciones abiertas</h3>
+          <p>Ya podés consultar vacantes para nuestras actividades.</p>
+          <a href="#socio">Más información →</a>
+        </article>
+        <article class="card-noticias">
+          <p class="noticia-fecha">1 de julio</p>
+          <h3>Nuevos horarios de entrenamiento</h3>
+          <p>Revisá las novedades de cada categoría y disciplina.</p>
+          <a href="#deportes">Ver actividades →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion-sumate" id="socio">
+      <div class="page-grid join-grid">
+        <div>
+          <p class="eyebrow eyebrow-light">Sumate al club</p>
+          <h2>Seguimos creciendo,<br>sumate vos también</h2>
+          <p>
+            Dejanos tus datos y te contactamos para brindarte información sobre
+            actividades, horarios e inscripción.
+          </p>
+        </div>
+
+        <form class="sumate-form" action="#" method="post">
+          <div class="form-field">
+            <label for="nombre">Nombre y apellido</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="actividad">Actividad de interés</label>
+            <select id="actividad" name="actividad">
+              <option value="">Seleccionar</option>
+              <option>Fútbol</option>
+              <option>Baile</option>
+              <option>Vóley</option>
+              <option>Boxeo</option>
+              <option>Gimnasio</option>
+              <option>Bocha</option>
+            </select>
+          </div>
+          <button class="button button-light" type="submit">Enviar consulta</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section page-grid contact" id="contacto">
+      <div class="contacto-info">
+        <p class="eyebrow">Contacto</p>
+        <h2>Acercate al club</h2>
+
+        <address class="contact-list">
+          <div>
+            <span aria-hidden="true">●</span>
+            <p><strong>Dirección</strong><br>Avenida 520 y 208, La Plata</p>
+          </div>
+          <div>
+            <span aria-hidden="true">●</span>
+            <p><strong>Teléfono</strong><br><a href="tel:+542214916335">(221) 491-6335</a></p>
+          </div>
+          <div>
+            <span aria-hidden="true">●</span>
+            <p><strong>Horarios</strong><br>Lunes a Sabado, 08 a 21hs</p>
+          </div>
+          <div>
+            <span aria-hidden="true">●</span>
+            <p><strong>Correo</strong><br><a href="mailto:clubatleticoabastenseargentino@hotmail.com">clubatleticoabastenseargentino@hotmail.com</a></p>
+          </div>
+        </address>
+      </div>
+
+      <div class="map-placeholder" role="img" aria-label="Mapa de ubicación del Club Abastense">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26148.52920786015!2d-58.094783459863265!3d-34.99253039870792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c3433156fc91%3A0x1a6031ba9ae125da!2sClub%20atletico%20Abastense%20Argentino!5e0!3m2!1ses!2sar!4v1785016557695!5m2!1ses!2sar" width="350" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-grid footer-grid">
+      <div class="footer-brand">
+        <img src="img/escudo.png" alt="Escudo del Club Abastense">
+        <div>
+          <strong>Club Abastense</strong>
+          <span>La Plata</span>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación del pie de página">
+        <ul>
+          <li><a href="#club">El club</a></li>
+          <li><a href="#deportes">Deportes</a></li>
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#socio">Sé socio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <p class="footer-message">Un club de barrio,<br>para toda la vida.</p>
+      <p class="footer-copy">© 2026 Club abastense.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
