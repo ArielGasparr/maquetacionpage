@@ -627,7 +627,7 @@ h3 {
   font-size: 0.85rem;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 768px) {
   .header-inner {
     flex-wrap: wrap;
     padding-block: var(--space-sm);
@@ -679,7 +679,7 @@ h3 {
   }
 }
 
-@media (max-width: 360px) {
+@media (min-width: 375px) {
   :root {
     --space-xl: 3rem;
     --space-2xl: 4rem;
