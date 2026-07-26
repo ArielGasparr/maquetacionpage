@@ -652,11 +652,13 @@ h3 {
   width: 100%;
   margin-left: 0;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .main-nav ul {
-  justify-content: space-between;
-  min-width: 620px;
+  justify-content: flex-start;
+  gap: var(--space-lg);
+  min-width: max-content;
 }
 
 .header-cta {
@@ -672,7 +674,9 @@ h3 {
 }
 
 .hero h1 {
-  font-size: clamp(3.2rem, 18vw, 5rem);
+  max-width: 100%;
+  font-size: clamp(2.8rem, 15vw, 4.5rem);
+  overflow-wrap: break-word;
 }
 
 .about,
