@@ -224,16 +224,16 @@ select {
 }
 
 .hero-info {
-  grid-column: 1 / span 6;
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
 }
 
 .hero h1 {
-  margin: 0 0 var(--space-md);
-  font-family: var(--font-display);
+  max-width: 100%;
   font-size: clamp(3.6rem, 8vw, 7rem);
   line-height: 0.92;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .hero-info > p:not(.eyebrow) {
@@ -630,9 +630,6 @@ h3 {
   font-size: 0.85rem;
 }
 
-/* ===================================================== */
-/* MOBILE FIRST — BASE: MOBILE DESDE 375px                */
-/* ===================================================== */
 
 :root {
   --space-xl: 3rem;
@@ -662,7 +659,7 @@ h3 {
 
 .main-nav ul {
   justify-content: space-between;
-  min-width: 620px;
+  
 }
 
 .header-cta {
@@ -675,16 +672,9 @@ h3 {
 
 .hero-info {
   grid-column: 1 / -1;
-  width: 100%;
-  min-width: 0;
 }
 
-.hero h1 {
-  max-width: 100%;
-  font-size: clamp(2.4rem, 13vw, 4rem);
-  line-height: 0.92;
-  overflow-wrap: anywhere;
-}
+
 
 .about,
 .contact {
@@ -768,7 +758,6 @@ h3 {
 
   .hero h1 {
     font-size: clamp(3.6rem, 8vw, 7rem);
-    overflow-wrap: normal;
   }
 
   .about,
@@ -896,10 +885,11 @@ h3 {
     width: 100%;
   }
 
-   .form-field:nth-child(3),
+    .form-field:nth-child(3),
   .sumate-form .button {
     grid-column: 1 / -1;
   }
+
   .contacto-info {
     grid-column: 1 / span 8;
   }
