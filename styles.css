@@ -473,7 +473,7 @@ h3 {
 
 .join-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-xl);
   align-items: center;
 }
@@ -487,15 +487,19 @@ h3 {
 }
 
 .sumate-form {
-  grid-column: 6 / -1;
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-md);
+  width: 100%;
+  min-width: 0;
 }
 
 .form-field {
   display: grid;
   gap: var(--space-xs);
+  width: 100%;
+  min-width: 0;
 }
 
 .form-field:nth-child(3),
@@ -510,12 +514,11 @@ h3 {
 
 .form-field input,
 .form-field select {
+  box-sizing: border-box;
+  display: block;
   width: 100%;
-  min-height: 48px;
-  padding-inline: 0.9rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius-sm);
-  background: var(--color-white);
+  max-width: 100%;
+  min-width: 0;
 }
 
 .contact {
@@ -581,7 +584,7 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   align-items: start;
 }
@@ -627,6 +630,9 @@ h3 {
   font-size: 0.85rem;
 }
 
+/* ===================================================== */
+/* MOBILE FIRST — BASE: MOBILE DESDE 375px                */
+/* ===================================================== */
 
 :root {
   --space-xl: 3rem;
@@ -652,13 +658,11 @@ h3 {
   width: 100%;
   margin-left: 0;
   overflow-x: auto;
-  overflow-y: hidden;
 }
 
 .main-nav ul {
-  justify-content: flex-start;
-  gap: var(--space-lg);
-  min-width: max-content;
+  justify-content: space-between;
+  min-width: 620px;
 }
 
 .header-cta {
@@ -671,12 +675,15 @@ h3 {
 
 .hero-info {
   grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
 }
 
 .hero h1 {
   max-width: 100%;
-  font-size: clamp(2.8rem, 15vw, 4.5rem);
-  overflow-wrap: break-word;
+  font-size: clamp(2.4rem, 13vw, 4rem);
+  line-height: 0.92;
+  overflow-wrap: anywhere;
 }
 
 .about,
@@ -709,7 +716,9 @@ h3 {
 
 .join-grid > div,
 .sumate-form {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  width: 100%;
+  min-width: 0;
 }
 
 .form-field:nth-child(3),
@@ -759,6 +768,7 @@ h3 {
 
   .hero h1 {
     font-size: clamp(3.6rem, 8vw, 7rem);
+    overflow-wrap: normal;
   }
 
   .about,
@@ -792,7 +802,7 @@ h3 {
 
   .join-grid > div,
   .sumate-form {
-    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .form-field:nth-child(3),
@@ -869,14 +879,27 @@ h3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .join-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: center;
+  }
+
   .join-grid > div {
     grid-column: 1 / span 5;
+    grid-row: 1;
   }
 
   .sumate-form {
     grid-column: 6 / -1;
+    grid-row: 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
   }
 
+   .form-field:nth-child(3),
+  .sumate-form .button {
+    grid-column: 1 / -1;
+  }
   .contacto-info {
     grid-column: 1 / span 8;
   }
